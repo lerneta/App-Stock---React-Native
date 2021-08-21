@@ -25,7 +25,7 @@ const Principal = () => (
     <principalnavegador.Screen
     name="Principal"
     component={Home}
-    options={{ title: 'Principal' }}
+    options={{ title: 'Mis Productos' }}
     />
     <principalnavegador.Screen
     name="Detalle"

@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useEffect } from 'react'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux';
 import { loaditems } from '../store/item.action';
-
+import  Item  from '../componentes/item';
 
 const Home = ({ navigation }) => {
  
@@ -13,11 +13,12 @@ const Home = ({ navigation }) => {
         dispatch(loaditems());
     }, []);
 
+
     const renderItem = data => (
         <Item
             image={data.item.image}
-            address={data.item.address}
             title={data.item.title}
+            amount={data.item.amount}
             onSelect={() => navigation.push('Detalle', { id: data.item.id })}
         />
     )

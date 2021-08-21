@@ -4,7 +4,7 @@ import {  createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import  { Ionicons } from '@expo/vector-icons'; 
 
 import Principal from '../principal';
-import Usuario from '../usuario';
+import NuevoProducto from '../../screens/NuevoProducto';
 
 const TabStack = createBottomTabNavigator();
 
@@ -27,15 +27,13 @@ component={Principal}
 options={{
     tabBarIcon: ({focused}) => (<View style={styles.item}>
         <Ionicons name="md-home"  color="black" size={24}/>
-        <Text>Principal</Text>
     </View>)
 }}
 
 />
-<TabStack.Screen name="Usuario" component={Usuario} options={{
+<TabStack.Screen name="Nuevo Producto" component={NuevoProducto} options={{
     tabBarIcon: ({focused}) => (<View style={styles.item}>
-        <Ionicons name="md-home"  color="black" size={24}/>
-        <Text>Usuario</Text>
+        <Ionicons name="md-add"  color="black" size={24}/>
     </View>)
 }}/>
     </TabStack.Navigator>
